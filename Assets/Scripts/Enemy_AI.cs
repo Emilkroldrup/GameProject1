@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Enemy_AI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // waypoints
+    public List<Transform> points;
+    public int nextID; // value of next waypoint
+    int idChangeValue = 1;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

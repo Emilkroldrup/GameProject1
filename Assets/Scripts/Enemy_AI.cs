@@ -23,6 +23,7 @@ public class Enemy_AI : MonoBehaviour
         Vector2 direction = player.transform.position - transform.position;         // maybe flip it?
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
         if (distance < distanceBetween)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);

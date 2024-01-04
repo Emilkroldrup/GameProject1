@@ -8,7 +8,7 @@ public class Enemy_AI : MonoBehaviour
     public float speed; // movement speed of enemies
     public float distanceBetween;   
     private float distance;
-
+    private float angle;
 
     void start()
     {
@@ -19,10 +19,14 @@ public class Enemy_AI : MonoBehaviour
     {
         
         //Gets distance between player object and enemy ai
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;         // maybe flip it?
-        direction.Normalize();
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if(player != null)
+        {
+            distance = Vector2.Distance(transform.position, player.transform.position);
+            Vector2 direction = player.transform.position - transform.position;         // maybe flip it?
+            direction.Normalize();
+            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        }
+        
 
         if (distance < distanceBetween)
         {

@@ -947,6 +947,7 @@ GameObject:
   - component: {fileID: 1743031114}
   - component: {fileID: 1743031113}
   - component: {fileID: 1743031112}
+  - component: {fileID: 1743031115}
   m_Layer: 0
   m_Name: Mikkel
   m_TagString: Untagged
@@ -1103,6 +1104,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1743031115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743031109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 147db8e22699cff41b410baff81c9293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxhealth: 50
 --- !u!1 &1807152891
 GameObject:
   m_ObjectHideFlags: 0

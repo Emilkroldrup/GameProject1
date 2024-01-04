@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 1081495872}
   - component: {fileID: 1081495873}
   m_Layer: 0
-  m_Name: Enemy1
+  m_Name: FarligFirkant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 1743031113}
   - component: {fileID: 1743031112}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Mikkel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

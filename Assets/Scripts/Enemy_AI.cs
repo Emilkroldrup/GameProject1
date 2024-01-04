@@ -9,4 +9,9 @@ public class Enemy_AI : MonoBehaviour
     public int nextID; // value of next waypoint
     int idChangeValue = 1;
 
+    private void Reset()
+    {
+        
+    }
+
 }

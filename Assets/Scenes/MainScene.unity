@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 576747452}
   - component: {fileID: 576747453}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1505,7 +1505,7 @@ GameObject:
   - component: {fileID: 2017921133}
   - component: {fileID: 2017921132}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1581,7 +1581,7 @@ GameObject:
   - component: {fileID: 2133321308}
   - component: {fileID: 2133321307}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: PlayerCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

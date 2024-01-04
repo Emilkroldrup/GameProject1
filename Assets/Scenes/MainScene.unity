@@ -601,9 +601,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb6321678f2c2741b0576b1b26bb894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 339035643}
-  speed: 3
-  distanceBetween: 10
+  player: {fileID: 675813180}
+  speed: 2
+  distanceBetween: 5
 --- !u!61 &1081495873
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class Enemy_AI : MonoBehaviour
     public float distanceBetween;   
     private float distance;
     private float angle;
+    public Coins coins;
 
     void start()
     {
@@ -31,8 +32,12 @@ public class Enemy_AI : MonoBehaviour
                 transform.rotation = Quaternion.Euler(Vector3.forward * angle);
             }
         }
-        
-       
-        
+
+   
+
+    }
+    private void OnDestroy()
+    {
+        coins.UpdateGoldOnEnemyDestroyed();
     }
 }

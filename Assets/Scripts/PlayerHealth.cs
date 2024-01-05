@@ -21,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            Destroy(healthbar.gameObject);
         }
 
         healthbar.sethealth(health);

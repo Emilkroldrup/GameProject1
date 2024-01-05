@@ -38,6 +38,7 @@ public class Enemy_AI : MonoBehaviour
     }
     private void OnDestroy()
     {
+        Conditions.wincondition--;
         coins.UpdateGoldOnEnemyDestroyed();
     }
 }

@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 339035649}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1082,6 +1082,7 @@ GameObject:
   - component: {fileID: 1081495869}
   - component: {fileID: 1081495872}
   - component: {fileID: 1081495873}
+  - component: {fileID: 1081495874}
   m_Layer: 0
   m_Name: FarligFirkant
   m_TagString: FarligFirkant
@@ -1217,6 +1218,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1081495874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081495867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d39396bf834de9b4780b044f83e57689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 339035649}
+  damage: 10
 --- !u!1 &1123722445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1604,7 @@ GameObject:
   - component: {fileID: 1743031111}
   m_Layer: 0
   m_Name: Mikkel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

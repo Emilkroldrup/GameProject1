@@ -24,4 +24,5 @@ public class Healthbar : MonoBehaviour
         slider.value = health;
         fill.color = Farver.Evaluate(slider.normalizedValue);
     }
+    
 }

@@ -15,6 +15,16 @@ public class PlayerHealth : MonoBehaviour
         healthbar.setmaxhealth(maxhealth);
     }
 
+    public void TakeDamage(int amount) // amount = amount of damage taken
+    {
+        health -= amount;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            Destroy(healthbar.gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

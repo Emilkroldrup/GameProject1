@@ -6,51 +6,83 @@ public class MovementController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.2f;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    private bool isDashing;
+    private float dashEndTime;
+    private int jumpCount = 0;
+    private const int maxJumpCount = 1; // Allows for double jump
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Check if the player is grounded
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-        Move();
-
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (isGrounded) 
         {
-            Jump();
+            jumpCount = 0;
         }
+
+        if (!isDashing)
+        {
+            HandleMovement();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                HandleJump();
+            }
+        }
+
+        HandleDash();
     }
 
-    private void Move()
+    private void HandleMovement()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
     }
 
-    private void Jump()
+    private void HandleJump()
     {
-        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        if (isGrounded || jumpCount < maxJumpCount)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpCount++;
+        }
     }
 
-    void OnDrawGizmos()
+    private void HandleDash()
     {
-        // This will draw a circle in the editor to visualize the ground check area
-        if (groundCheck != null)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+            StartDash();
         }
+
+        if (Time.time >= dashEndTime && isDashing)
+        {
+            EndDash();
+        }
+    }
+
+    private void StartDash()
+    {
+        isDashing = true;
+        float dashDirection = Mathf.Sign(rb.velocity.x);
+        if (dashDirection == 0) dashDirection = 1; // Default to right if stationary
+        rb.velocity = new Vector2(dashDirection * dashSpeed, rb.velocity.y);
+        dashEndTime = Time.time + dashDuration;
+    }
+
+    private void EndDash()
+    {
+        isDashing = false;
     }
 }

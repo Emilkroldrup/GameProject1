@@ -6,10 +6,13 @@ public class PlayerHealth : MonoBehaviour
 {
     public int health;
     public int maxhealth = 50;
+    public Healthbar healthbar;
+
     // Start is called before the first frame update
     void Start()
     {
         health = maxhealth;
+        healthbar.setmaxhealth(maxhealth);
     }
 
     // Update is called once per frame
@@ -19,5 +22,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        healthbar.sethealth(health);
     }
 }

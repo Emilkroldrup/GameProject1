@@ -34,6 +34,6 @@ public class Enemy_Health : MonoBehaviour
             Destroy(healthbar.gameObject);
         }
 
-        healthbar.sethealth(health);
+        
     }
 }

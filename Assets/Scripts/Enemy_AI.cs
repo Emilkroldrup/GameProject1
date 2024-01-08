@@ -10,6 +10,7 @@ public class Enemy_AI : MonoBehaviour
     private float distance;
     private float angle;
     public Coins coins;
+    
 
     void start()
     {
@@ -39,6 +40,7 @@ public class Enemy_AI : MonoBehaviour
     private void OnDestroy()
     {
         Conditions.wincondition--;
+        EnemySpawner.currentSpawns--;
         coins.UpdateGoldOnEnemyDestroyed();
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class Conditions : MonoBehaviour
 {
 
-    [SerializeField]
-    public static int wincondition = 1;
+  
+    public static int wincondition = EnemySpawner.MaxSpawn;
     public GameObject win;
     public GameObject Playercanvas;
     private bool hasInitialized = false;

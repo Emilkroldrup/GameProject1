@@ -6,7 +6,7 @@ using TMPro;
 public class Coins : MonoBehaviour
 {
 
-    [SerializeField]
+    
    public int playergold = 0;
    
     private TMP_Text TEXT;

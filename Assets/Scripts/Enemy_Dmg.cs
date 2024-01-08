@@ -6,6 +6,7 @@ public class Enemy_Dmg : MonoBehaviour
 {
     public PlayerHealth playerHealth;
     public int damage = 2;
+    public Coins coins;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +26,12 @@ public class Enemy_Dmg : MonoBehaviour
         {
             playerHealth.TakeDamage(damage);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Conditions.wincondition--;
+        EnemySpawner.currentSpawns--;
+        coins.UpdateGoldOnEnemyDestroyed();
     }
 }

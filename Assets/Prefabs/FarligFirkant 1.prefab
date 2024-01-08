@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8301937094846174376
+--- !u!1 &4939860918749465954
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 608450429173399816}
-  - component: {fileID: 5663424965976743663}
-  - component: {fileID: 1790234809856605121}
-  - component: {fileID: 1774592010375615450}
-  - component: {fileID: 2785113074908382771}
+  - component: {fileID: 8755293184227258507}
+  - component: {fileID: 6714647518779027469}
+  - component: {fileID: 5034695917965603483}
+  - component: {fileID: 737352849281162128}
+  - component: {fileID: 5494723522559146199}
   m_Layer: 0
-  m_Name: FarligFirkant
+  m_Name: FarligFirkant 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &608450429173399816
+--- !u!4 &8755293184227258507
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8301937094846174376}
+  m_GameObject: {fileID: 4939860918749465954}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.34, z: 0}
+  m_LocalPosition: {x: 0, y: -0.69000006, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5663424965976743663
+--- !u!212 &6714647518779027469
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8301937094846174376}
+  m_GameObject: {fileID: 4939860918749465954}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -87,13 +87,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1790234809856605121
+--- !u!114 &5034695917965603483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8301937094846174376}
+  m_GameObject: {fileID: 4939860918749465954}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cb6321678f2c2741b0576b1b26bb894, type: 3}
@@ -103,13 +103,13 @@ MonoBehaviour:
   speed: 4
   distanceBetween: 5
   coins: {fileID: 0}
---- !u!61 &1774592010375615450
+--- !u!61 &737352849281162128
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8301937094846174376}
+  m_GameObject: {fileID: 4939860918749465954}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -148,13 +148,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &2785113074908382771
+--- !u!114 &5494723522559146199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8301937094846174376}
+  m_GameObject: {fileID: 4939860918749465954}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d39396bf834de9b4780b044f83e57689, type: 3}
@@ -162,3 +162,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
   damage: 10
+  coins: {fileID: 0}

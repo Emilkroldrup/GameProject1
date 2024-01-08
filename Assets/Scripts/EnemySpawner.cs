@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     [HideInInspector]
     public int randomfjende;
     private float tid;
-    private float cooldown = 1;
+    public float cooldown;
     private float maxx = 10;
     private float minx = 3;
    

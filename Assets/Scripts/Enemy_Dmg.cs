@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Dmg : MonoBehaviour
 {
     public PlayerHealth playerHealth;
-    public int damage = 2;
+    public int damage;
     public Coins coins;
 
     // Start is called before the first frame update
@@ -20,9 +20,9 @@ public class Enemy_Dmg : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
             playerHealth.TakeDamage(damage);
         }

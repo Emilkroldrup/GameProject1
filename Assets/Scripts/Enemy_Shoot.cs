@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,8 @@ public class Enemy_Shoot : MonoBehaviour
 
     private float timer;
     private GameObject player;
-
-
+    public Coins coins;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -40,5 +41,15 @@ public class Enemy_Shoot : MonoBehaviour
     void Shoot()
     {
         Instantiate(projectile, projectilePos.position, Quaternion.identity);
+    }
+
+    private void OnDestroy()
+    {
+       
+            Conditions.wincondition--;
+            EnemySpawner.currentSpawns--;
+            coins.UpdateGoldOnEnemyDestroyed();
+        
+
     }
 }

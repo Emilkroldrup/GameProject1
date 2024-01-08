@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Enemy_Dmg : MonoBehaviour
     public PlayerHealth playerHealth;
     public int damage;
     public Coins coins;
+  
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +32,11 @@ public class Enemy_Dmg : MonoBehaviour
 
     private void OnDestroy()
     {
-        Conditions.wincondition--;
-        EnemySpawner.currentSpawns--;
-        coins.UpdateGoldOnEnemyDestroyed();
+       
+            Conditions.wincondition--;
+            EnemySpawner.currentSpawns--;
+            coins.UpdateGoldOnEnemyDestroyed();
+        
+  
     }
 }

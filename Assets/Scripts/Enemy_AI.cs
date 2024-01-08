@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class Enemy_AI : MonoBehaviour
     public Transform startingPoint;
 
     private GameObject player;
+
+    private Boolean hasdestroyed = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -51,8 +54,14 @@ public class Enemy_AI : MonoBehaviour
     
     private void OnDestroy()
     {
-        Conditions.wincondition--;
-        EnemySpawner.currentSpawns--;
-        coins.UpdateGoldOnEnemyDestroyed();
+
+        if (hasdestroyed)
+        {
+            Conditions.wincondition--;
+            EnemySpawner.currentSpawns--;
+            coins.UpdateGoldOnEnemyDestroyed();
+            hasdestroyed = true;
+        }
+     
     }
 }

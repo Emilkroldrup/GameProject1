@@ -5,20 +5,23 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] enemyprefab;
+    public Transform playerTransform;
     public static int MaxSpawn = 6;
     public static int totalspawns;
     public static int currentSpawns;
     [HideInInspector]
     public int randomfjende;
     private float tid;
-    private float cooldown = 1f;
-    [HideInInspector]
+    private float cooldown = 1;
+    private float maxx = 10;
+    private float minx = 3;
    
 
     // Start is called before the first frame update
     void Start()
     {
         tid = cooldown;
+       
     }
 
     // Update is called once per frame
@@ -30,25 +33,30 @@ public class EnemySpawner : MonoBehaviour
         {
                 spawnenemy();
                 tid = cooldown;
+         
         }
     }
 
     private void spawnenemy()
     {
         randomfjende = Random.Range(1, 10);
+        float spawnrange = Random.Range(minx, maxx);
+        Vector3 spawnposition = playerTransform.position + new Vector3(spawnrange,0, 0);
+
+
 
         if (randomfjende <= 7)
         {
             currentSpawns++;
             totalspawns++;
-            Instantiate(enemyprefab[0], transform.position, Quaternion.identity);
+            Instantiate(enemyprefab[0], spawnposition, Quaternion.identity);
           
         }
         else if (randomfjende >= 8)
         {
             currentSpawns++;
             totalspawns++;
-            Instantiate(enemyprefab[1], transform.position, Quaternion.identity);
+            Instantiate(enemyprefab[1], spawnposition, Quaternion.identity);
             
         }
     }

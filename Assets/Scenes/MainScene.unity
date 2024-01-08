@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 141169232}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6245308, y: 0.29999995, z: -5}
+  m_LocalPosition: {x: -0.7045312, y: 0.29999995, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -401,7 +401,7 @@ Transform:
   m_GameObject: {fileID: 251352827}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6245308, y: 0.29999995, z: -5}
+  m_LocalPosition: {x: -0.7045312, y: 0.29999995, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -451,7 +451,7 @@ Transform:
   m_GameObject: {fileID: 274025740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.89, y: -0.0000011325, z: 0}
+  m_LocalPosition: {x: 0.89, y: 0, z: 0}
   m_LocalScale: {x: 0.9875, y: 19.913, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -466,7 +466,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 274025740}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8208dd00187bc76458035999ca808893, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -621,7 +621,7 @@ Transform:
   m_GameObject: {fileID: 480569552}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.13, y: 0.65714544, z: 0.024138726}
+  m_LocalPosition: {x: -11.13, y: 0.65714544, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1596,6 +1596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FarligFirkant
       objectReference: {fileID: 0}
+    - target: {fileID: 4939860918749465954, guid: 535cf4b1540e3674e88c350be69c3766, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5034695917965603483, guid: 535cf4b1540e3674e88c350be69c3766, type: 3}
       propertyPath: coins
       value: 
@@ -1709,7 +1713,7 @@ Transform:
   m_GameObject: {fileID: 781220720485024419}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.99, y: -2.01, z: 0}
+  m_LocalPosition: {x: -7.07, y: -2.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

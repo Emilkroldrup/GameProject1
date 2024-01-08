@@ -794,8 +794,8 @@ Transform:
   m_GameObject: {fileID: 1080559598}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0014052391, y: 0.38, z: 5}
-  m_LocalScale: {x: 20.573189, y: 9.9420595, z: 1}
+  m_LocalPosition: {x: -0.78, y: -0.67, z: 5}
+  m_LocalScale: {x: 20.573189, y: 13.048953, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 191756779}
@@ -1598,7 +1598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4939860918749465954, guid: 535cf4b1540e3674e88c350be69c3766, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5034695917965603483, guid: 535cf4b1540e3674e88c350be69c3766, type: 3}
       propertyPath: coins

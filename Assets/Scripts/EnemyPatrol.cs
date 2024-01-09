@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    public GameObject pointA;
-    public GameObject pointB;
+    private GameObject pointA;
+    private GameObject pointB;
    
     
     private Rigidbody2D rb;
@@ -17,10 +17,15 @@ public class EnemyPatrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pointA = GameObject.Find("PointA");
+        pointB = GameObject.Find("PointB");
         rb = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
         //anim.SetBool("isRunning", true);
+
+   
+
 
     }
 

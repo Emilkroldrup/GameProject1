@@ -1,25 +1,29 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Dmg : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
+    private PlayerHealth playerHealth;  // Reference to the player's health script
     public int damage;
     public Coins coins;
-  
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Find the player's health script at runtime
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+
+        if (coins != null)
+        {
+            coins = FindObjectOfType<Coins>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Your update logic here
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -32,11 +36,8 @@ public class Enemy_Dmg : MonoBehaviour
 
     private void OnDestroy()
     {
-       
-            Conditions.wincondition--;
-            EnemySpawner.currentSpawns--;
-            coins.UpdateGoldOnEnemyDestroyed();
-        
-  
+        Conditions.wincondition--;
+        EnemySpawner.currentSpawns--;
+        coins.UpdateGoldOnEnemyDestroyed();
     }
 }

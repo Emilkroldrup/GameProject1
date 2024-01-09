@@ -17,7 +17,15 @@ public class Enemy_AI : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+       
+            player = GameObject.FindGameObjectWithTag("Player");
+        
+
+       if(coins != null)
+        {
+            coins = FindObjectOfType<Coins>();
+        }
+   
 
     }
 

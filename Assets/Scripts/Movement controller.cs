@@ -14,6 +14,7 @@ public class MovementController : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
     private bool isGrounded;
     private bool isDashing;
     private float dashEndTime;
@@ -23,6 +24,7 @@ public class MovementController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -51,6 +53,15 @@ public class MovementController : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
+
+           if (moveX > 0 && spriteRenderer.flipX)
+        {
+            FlipSprite();
+        }
+        else if (moveX < 0 && !spriteRenderer.flipX)
+        {
+            FlipSprite();
+        }
     }
 
     private void HandleJump()
@@ -87,5 +98,10 @@ public class MovementController : MonoBehaviour
     private void EndDash()
     {
         isDashing = false;
+    }
+
+    private void FlipSprite()
+    {
+        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6931658619520735234}
   - component: {fileID: 7546563534759632954}
   - component: {fileID: 6743712739800561273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RapidRektangel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -145,7 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39396bf834de9b4780b044f83e57689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 5606648044778633449, guid: b97309b477e3f124d9669299e1882a1d, type: 3}
   damage: 10
   coins: {fileID: 1502279902902313455, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
 --- !u!50 &7546563534759632954
@@ -187,6 +186,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e26145cefb8354cac0d3535dc688a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 7704811264405790532, guid: beb81b148d600554db7d399260e0b5c3, type: 3}
-  pointB: {fileID: 6008067162332631420, guid: a5b63f6f66ec58c4098dc0945e999ad4, type: 3}
   speed: 5

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3902585675917884720}
   m_Layer: 0
   m_Name: FarligFirkant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,7 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39396bf834de9b4780b044f83e57689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 5606648044778633449, guid: b97309b477e3f124d9669299e1882a1d, type: 3}
   damage: 10
   coins: {fileID: 1502279902902313455, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
 --- !u!1 &1244184638566681354

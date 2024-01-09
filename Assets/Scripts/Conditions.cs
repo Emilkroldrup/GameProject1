@@ -9,6 +9,7 @@ public class Conditions : MonoBehaviour
     public static int wincondition = EnemySpawner.MaxSpawn;
     public GameObject win;
     public GameObject Playercanvas;
+    public GameObject Player;
     private bool hasInitialized = false;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class Conditions : MonoBehaviour
         {
             Initializewincon(win);
             DisableOtherPrefab(Playercanvas);
+            DisableOtherPrefab(Player);
             hasInitialized = true;
 
           

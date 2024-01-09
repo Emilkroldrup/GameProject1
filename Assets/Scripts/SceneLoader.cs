@@ -9,4 +9,8 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void SafeHub(){
+        SceneManager.LoadScene(2);
+    }
 }

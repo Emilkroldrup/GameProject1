@@ -1812,6 +1812,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2523854791485030276, guid: b97309b477e3f124d9669299e1882a1d, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 4214496519554942450}
+    - target: {fileID: 2523854791485030276, guid: b97309b477e3f124d9669299e1882a1d, type: 3}
       propertyPath: Playercanvas
       value: 
       objectReference: {fileID: 1961709155631873622}

@@ -43,7 +43,7 @@ public class MovementController : MonoBehaviour
                 HandleJump();
             }
         }
-        
+
         HandleDash();
     }
 

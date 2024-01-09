@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void spawnenemy()
+    private void spawnenemy()   
     {
         if(player != null)
         {

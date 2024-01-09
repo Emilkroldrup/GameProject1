@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5644482223673146352}
   - component: {fileID: 7243041052726074408}
   - component: {fileID: 3902585675917884720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FarligFirkant
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5205307780603897490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirkantStartPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 4667521185959149365}
   - component: {fileID: 35810471752384774}
   - component: {fileID: 4814483085355710563}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: ChaseTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

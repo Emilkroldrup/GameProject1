@@ -147,4 +147,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111ab8492159f044f9d443fbe2fa3564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playergold: 0
+  playergold: 190

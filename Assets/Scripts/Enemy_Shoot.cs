@@ -21,20 +21,25 @@ public class Enemy_Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        float distance = Vector2.Distance(transform.position, player.transform.position); //  Detects the distance between enemy and the player
-        
-        if(distance < 8)
+        if(player != null)
         {
-            timer += Time.deltaTime;
+            float distance = Vector2.Distance(transform.position, player.transform.position); //  Detects the distance between enemy and the player
 
-            if(timer > 2)
+
+            if (distance < 8)
             {
-                timer = 0;
-                Shoot();
+                timer += Time.deltaTime;
+
+                if (timer > 2)
+                {
+                    timer = 0;
+                    Shoot();
+                }
+
             }
-            
         }
+
+  
 
     }
 

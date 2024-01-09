@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] enemyprefab;
-    public Transform playerTransform;
+
+    public GameObject player;
     public static int MaxSpawn = 6;
     public static int totalspawns;
     public static int currentSpawns;
@@ -29,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
     {
         tid -= Time.deltaTime;
 
-        if (currentSpawns < 5 && tid <= 0 && totalspawns <MaxSpawn)
+        if (currentSpawns < 5 && tid <= 0 && totalspawns <MaxSpawn && player != null)
         {
                 spawnenemy();
                 tid = cooldown;
@@ -39,25 +40,30 @@ public class EnemySpawner : MonoBehaviour
 
     private void spawnenemy()
     {
-        randomfjende = Random.Range(1, 10);
-        float spawnrange = Random.Range(minx, maxx);
-        Vector3 spawnposition = playerTransform.position + new Vector3(spawnrange,0, 0);
-
-
-
-        if (randomfjende <= 7)
+        if(player != null)
         {
-            currentSpawns++;
-            totalspawns++;
-            Instantiate(enemyprefab[0], spawnposition, Quaternion.identity);
-          
-        }
-        else if (randomfjende >= 8)
-        {
-            currentSpawns++;
-            totalspawns++;
-            Instantiate(enemyprefab[1], spawnposition, Quaternion.identity);
-            
+            randomfjende = Random.Range(1, 10);
+            float spawnrange = Random.Range(minx, maxx);
+            Transform playerTransform = player.transform;
+            Vector3 spawnposition = playerTransform.position + new Vector3(spawnrange, 0, 0);
+
+
+
+            if (randomfjende <= 7)
+            {
+                currentSpawns++;
+                totalspawns++;
+                Instantiate(enemyprefab[0], spawnposition, Quaternion.identity);
+
+            }
+            else if (randomfjende >= 8)
+            {
+                currentSpawns++;
+                totalspawns++;
+                Instantiate(enemyprefab[1], spawnposition, Quaternion.identity);
+
+            }
         }
     }
+       
 }

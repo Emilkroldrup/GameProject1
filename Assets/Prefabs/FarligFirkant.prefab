@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5207594475114737513
 Transform:
   m_ObjectHideFlags: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   chase: 0
-  coins: {fileID: 0}
+  coins: {fileID: 1502279902902313455, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
   startingPoint: {fileID: 5205307780603897490}
 --- !u!50 &5644482223673146352
 Rigidbody2D:
@@ -190,9 +190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39396bf834de9b4780b044f83e57689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 5606648044778633449, guid: b97309b477e3f124d9669299e1882a1d, type: 3}
   damage: 10
-  coins: {fileID: 0}
+  coins: {fileID: 1502279902902313455, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
 --- !u!1 &1244184638566681354
 GameObject:
   m_ObjectHideFlags: 0

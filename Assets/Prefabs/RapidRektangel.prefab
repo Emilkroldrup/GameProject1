@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8207245867334211861
+--- !u!1 &9129687849476160362
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8301797477950015119}
-  - component: {fileID: 1747159255638502709}
-  - component: {fileID: 5976671791416641083}
-  - component: {fileID: 8926806237386411894}
-  - component: {fileID: 6897969955435289522}
-  - component: {fileID: 5266054707411266992}
+  - component: {fileID: 450595421396706238}
+  - component: {fileID: 1929124240317147871}
+  - component: {fileID: 1136020854866608103}
+  - component: {fileID: 6931658619520735234}
+  - component: {fileID: 7546563534759632954}
+  - component: {fileID: 6743712739800561273}
   m_Layer: 0
-  m_Name: RapidRektangel 1
+  m_Name: RapidRektangel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &8301797477950015119
+  m_IsActive: 1
+--- !u!4 &450595421396706238
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8207245867334211861}
+  m_GameObject: {fileID: 9129687849476160362}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.9300003, y: -3.38, z: 0}
@@ -36,13 +36,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1747159255638502709
+--- !u!212 &1929124240317147871
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8207245867334211861}
+  m_GameObject: {fileID: 9129687849476160362}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -88,13 +88,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5976671791416641083
+--- !u!61 &1136020854866608103
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8207245867334211861}
+  m_GameObject: {fileID: 9129687849476160362}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -133,29 +133,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0208759, y: 0.9531565}
   m_EdgeRadius: 0
---- !u!114 &8926806237386411894
+--- !u!114 &6931658619520735234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8207245867334211861}
+  m_GameObject: {fileID: 9129687849476160362}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d39396bf834de9b4780b044f83e57689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 5606648044778633449, guid: b97309b477e3f124d9669299e1882a1d, type: 3}
   damage: 10
-  coins: {fileID: 0}
---- !u!50 &6897969955435289522
+  coins: {fileID: 1502279902902313455, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
+--- !u!50 &7546563534759632954
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8207245867334211861}
+  m_GameObject: {fileID: 9129687849476160362}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -175,18 +175,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &5266054707411266992
+--- !u!114 &6743712739800561273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8207245867334211861}
+  m_GameObject: {fileID: 9129687849476160362}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5e26145cefb8354cac0d3535dc688a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 0}
-  pointB: {fileID: 0}
+  pointA: {fileID: 7704811264405790532, guid: beb81b148d600554db7d399260e0b5c3, type: 3}
+  pointB: {fileID: 6008067162332631420, guid: a5b63f6f66ec58c4098dc0945e999ad4, type: 3}
   speed: 5

@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 5222313492546054912, guid: 9cfb9ec8567d1584ab9ca289d93a7de7, type: 3}
   projectilePos: {fileID: 7516376440640677920}
+  coins: {fileID: 0}
 --- !u!1 &7381460712064142323
 GameObject:
   m_ObjectHideFlags: 0

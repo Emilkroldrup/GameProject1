@@ -14,9 +14,10 @@ public class Enemy_Dmg : MonoBehaviour
         // Find the player's health script at runtime
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
+        GameObject coinssobjekt = GameObject.FindGameObjectWithTag("Coins");
         if (coins != null)
         {
-            coins = FindObjectOfType<Coins>();
+            coins = coinssobjekt.GetComponent<Coins>();
         }
     }
 

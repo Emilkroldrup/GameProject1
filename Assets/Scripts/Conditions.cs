@@ -10,6 +10,7 @@ public class Conditions : MonoBehaviour
     public GameObject win;
     public GameObject Playercanvas;
     private bool hasInitialized = false;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class Conditions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( wincondition == 0 && !hasInitialized )
+        if( wincondition == 0 && !hasInitialized && player != null)
         {
             Initializewincon(win);
             DisableOtherPrefab(Playercanvas);

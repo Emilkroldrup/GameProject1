@@ -19,13 +19,14 @@ public class Enemy_AI : MonoBehaviour
     {
        
             player = GameObject.FindGameObjectWithTag("Player");
-        
 
-       if(coins != null)
+
+        GameObject coinssobjekt = GameObject.FindGameObjectWithTag("Coins");
+        if (coins != null)
         {
-            coins = FindObjectOfType<Coins>();
+            coins = coinssobjekt.GetComponent<Coins>();
         }
-   
+
 
     }
 

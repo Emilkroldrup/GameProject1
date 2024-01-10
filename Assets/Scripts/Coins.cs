@@ -5,29 +5,29 @@ using TMPro;
 
 public class Coins : MonoBehaviour
 {
-
-    
-   public int playergold = 0;
-   
+    public int playergold = 0;
     private TMP_Text TEXT;
-    // Start is called before the first frame update
+
     void Start()
     {
         TEXT = GetComponent<TMP_Text>();
-        TEXT.text += playergold;
-    }
 
-    // Update is called once per frame
+        playergold = PlayerPrefs.GetInt("PlayerGold", 0);
+
+        Updatetext();
+    }
 
     public void UpdateGoldOnEnemyDestroyed()
     {
         playergold += 10;
         Updatetext();
-        
+
+        PlayerPrefs.SetInt("PlayerGold", playergold);
+        PlayerPrefs.Save();
     }
+
     public void Updatetext()
     {
         TEXT.text = playergold.ToString();
-
     }
 }

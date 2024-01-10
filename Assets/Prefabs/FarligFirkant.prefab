@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   chase: 0
-  coins: {fileID: 1502279902902313455, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
+  coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
   startingPoint: {fileID: 5205307780603897490}
 --- !u!50 &5644482223673146352
 Rigidbody2D:
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  coins: {fileID: 1502279902902313455, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
+  coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
 --- !u!1 &1244184638566681354
 GameObject:
   m_ObjectHideFlags: 0

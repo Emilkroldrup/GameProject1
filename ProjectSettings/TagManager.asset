@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FarligFirkant
   - Enemy
+  - Coins
   layers:
   - Default
   - TransparentFX

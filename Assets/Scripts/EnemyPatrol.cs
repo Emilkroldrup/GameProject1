@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    private GameObject pointA;
-    private GameObject pointB;
+    public GameObject pointA;
+    public GameObject pointB;
    
     
     private Rigidbody2D rb;
@@ -17,16 +17,12 @@ public class EnemyPatrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pointA = GameObject.Find("PointA");
-        pointB = GameObject.Find("PointB");
+        pointA = GameObject.Find("PatrolPointA");
+        pointB = GameObject.Find("PatrolPointB");
         rb = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
         //anim.SetBool("isRunning", true);
-
-   
-
-
     }
 
     // Update is called once per frame
@@ -35,11 +31,11 @@ public class EnemyPatrol : MonoBehaviour
         Vector2 point = currentPoint.position - transform.position;
         if (currentPoint == pointB.transform)   // pointB is right, pointA is left
         {
-            rb.velocity = new Vector2(speed, 0);
+            rb.velocity = new Vector2(speed, 0);    // B
         }
         else
         {
-            rb.velocity = new Vector2(-speed, 0);
+            rb.velocity = new Vector2(-speed, 0);   // A
         }
 
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)

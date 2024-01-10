@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Dmg : MonoBehaviour
 {
     private PlayerHealth playerHealth;  // Reference to the player's health script
-    public int damage;
+    public int damage; 
     public Coins coins;
 
     // Start is called before the first frame update

@@ -14,13 +14,14 @@ GameObject:
   - component: {fileID: 5644482223673146352}
   - component: {fileID: 7243041052726074408}
   - component: {fileID: 3902585675917884720}
+  - component: {fileID: 443567823774015693}
   m_Layer: 8
   m_Name: FarligFirkant
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5207594475114737513
 Transform:
   m_ObjectHideFlags: 0
@@ -192,6 +193,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
+--- !u!114 &443567823774015693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191698369010686318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2954e13dd2977494882e763c34afda40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxhealth: 10
+  healthbar: {fileID: 6850457034065416363, guid: 3ec3a5e3bb204c1458cd97e5c6a0d29e, type: 3}
 --- !u!1 &1244184638566681354
 GameObject:
   m_ObjectHideFlags: 0

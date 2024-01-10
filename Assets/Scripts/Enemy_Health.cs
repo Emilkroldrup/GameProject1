@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Health : MonoBehaviour
 {
     public int health;
-    public int maxhealth = 15;
+    public int maxhealth = 10;
     public Healthbar healthbar;
 
     // Start is called before the first frame update
@@ -20,13 +20,12 @@ public class Enemy_Health : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-            Destroy(gameObject);
-            Destroy(healthbar.gameObject);
+            Die();
         }
     }
 
     // Update is called once per frame
-    void Update()
+    void Die()
     {
         if (health <= 0)
         {

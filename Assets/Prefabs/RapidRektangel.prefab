@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6931658619520735234}
   - component: {fileID: 7546563534759632954}
   - component: {fileID: 6743712739800561273}
+  - component: {fileID: 5576840741551674754}
   m_Layer: 8
   m_Name: RapidRektangel
   m_TagString: Enemy
@@ -186,4 +187,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e26145cefb8354cac0d3535dc688a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointA: {fileID: 6943949402928211108, guid: 021efda418f52014083d21fafebb0c6e, type: 3}
+  pointB: {fileID: 6521570338308487595, guid: e2256120be3980e43a89246e23f69807, type: 3}
   speed: 5
+--- !u!114 &5576840741551674754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9129687849476160362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2954e13dd2977494882e763c34afda40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxhealth: 20
+  healthbar: {fileID: 6850457034065416363, guid: 3ec3a5e3bb204c1458cd97e5c6a0d29e, type: 3}

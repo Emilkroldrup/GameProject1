@@ -7,26 +7,25 @@ public class Enemy_AI : MonoBehaviour
 {   
     public float speed;
     public bool chase = false;
-    public Coins coins;
+
     public Transform startingPoint;
 
     private GameObject player;
+    private Coins coins;
 
-    private Boolean hasdestroyed = false;
+    //private Boolean hasdestroyed = false;
 
     // Start is called before the first frame update
     private void Start()
     {
        
             player = GameObject.FindGameObjectWithTag("Player");
-
-
+        
         GameObject coinssobjekt = GameObject.FindGameObjectWithTag("Coins");
         if (coins != null)
         {
             coins = coinssobjekt.GetComponent<Coins>();
         }
-
 
     }
 
@@ -37,8 +36,8 @@ public class Enemy_AI : MonoBehaviour
             return;
         if (chase == true)
             Chase();
-        else
-            ReturnStartPoint();
+        
+            //ReturnStartPoint();
         Flip();
     }
 
@@ -48,10 +47,12 @@ public class Enemy_AI : MonoBehaviour
         
     }
 
+    /*
     private void ReturnStartPoint()
     {
         transform.position = Vector2.MoveTowards(transform.position, startingPoint.transform.position, speed * Time.deltaTime);
     }
+    */
 
     private void Flip()
     {
@@ -61,16 +62,6 @@ public class Enemy_AI : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 180, 0);
     }
     
-    private void OnDestroy()
-    {
-
-        if (hasdestroyed)
-        {
-            Conditions.wincondition--;
-            EnemySpawner.currentSpawns--;
-            coins.UpdateGoldOnEnemyDestroyed();
-            hasdestroyed = true;
-        }
-     
-    }
+    
+    
 }

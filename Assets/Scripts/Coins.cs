@@ -11,23 +11,24 @@ public class Coins : MonoBehaviour
     void Start()
     {
         TEXT = GetComponent<TMP_Text>();
-
-        playergold = PlayerPrefs.GetInt("PlayerGold", 0);
-
+        playergold = PlayerPrefs.GetInt("gold", 0);
         Updatetext();
+      
     }
 
     public void UpdateGoldOnEnemyDestroyed()
     {
         playergold += 10;
+        PlayerPrefs.SetInt("gold", playergold);
+        
         Updatetext();
+        
 
-        PlayerPrefs.SetInt("PlayerGold", playergold);
-        PlayerPrefs.Save();
     }
 
     public void Updatetext()
     {
         TEXT.text = playergold.ToString();
+        PlayerPrefs.Save();
     }
 }

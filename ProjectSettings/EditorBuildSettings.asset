@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SafeHub.unity
     guid: f787ce4b23889ed4b964cc2dd2e2f7ef
-  - enabled: 0
-    path: Assets/Scenes/GameOverScene.unity
-    guid: eac69eae2e4c9754b9ff620e01cb14c0
   m_configObjects: {}

@@ -7,7 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void SafeHub(){

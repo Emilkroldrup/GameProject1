@@ -1871,6 +1871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3902123491189070902, guid: 8f7197442d6463848924e85e7067a65d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5377432942108319948, guid: 8f7197442d6463848924e85e7067a65d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2036,6 +2040,5 @@ SceneRoots:
   - {fileID: 251352829}
   - {fileID: 1731404501}
   - {fileID: 6858889188202276278}
-
   - {fileID: 1322232832}
- dc6d117fa2055cc8916f0c483e63306fe24e6cb8
+  - {fileID: 1033580671}

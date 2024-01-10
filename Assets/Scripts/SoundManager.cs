@@ -16,7 +16,4 @@ public class SoundManager : MonoBehaviour
         AudioSrc.volume = musicSlider.value;
     }
     
-    void Awake(){
-        DontDestroyOnLoad(transform.gameObject);
-    }
 }

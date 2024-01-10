@@ -12,8 +12,7 @@ public class Coins : MonoBehaviour
     void Start()
     {
         TEXT = GetComponent<TMP_Text>();
-        playergold = PlayerPrefs.GetInt("gold", 0);
-        Debug.Log("Initial playergold: " + playergold);
+        playergold = PlayerPrefs.GetInt("Gold", 0);
         Updatetext();
       
     }
@@ -21,15 +20,15 @@ public class Coins : MonoBehaviour
     public void UpdateGoldOnEnemyDestroyed()
     {
         playergold += 10;
-        PlayerPrefs.SetInt("gold", playergold);
-        PlayerPrefs.Save();
+        PlayerPrefs.SetInt("Gold", playergold);
         Updatetext();
-        
+        PlayerPrefs.Save();
 
     }
 
     public void Updatetext()
     {
         TEXT.text = playergold.ToString();
+
     }
 }

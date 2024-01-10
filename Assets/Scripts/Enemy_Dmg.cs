@@ -37,8 +37,11 @@ public class Enemy_Dmg : MonoBehaviour
 
     private void OnDestroy()
     {
-        Conditions.wincondition--;
-        EnemySpawner.currentSpawns--;
-        coins.UpdateGoldOnEnemyDestroyed();
+        if (Application.isPlaying)
+        {
+            Conditions.wincondition--;
+            EnemySpawner.currentSpawns--;
+            coins.UpdateGoldOnEnemyDestroyed();
+        }
     }
 }

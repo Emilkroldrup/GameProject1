@@ -19,13 +19,14 @@ public class Enemy_AI : MonoBehaviour
     private void Start()
     {
        
-            player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         
-        GameObject coinssobjekt = GameObject.FindGameObjectWithTag("Coins");
+         GameObject coinssobjekt = GameObject.FindGameObjectWithTag("Coins");
         if (coins != null)
         {
             coins = coinssobjekt.GetComponent<Coins>();
         }
+        
 
     }
 
@@ -47,12 +48,12 @@ public class Enemy_AI : MonoBehaviour
         
     }
 
-    /*
+    
     private void ReturnStartPoint()
     {
         transform.position = Vector2.MoveTowards(transform.position, startingPoint.transform.position, speed * Time.deltaTime);
     }
-    */
+    
 
     private void Flip()
     {
@@ -61,7 +62,13 @@ public class Enemy_AI : MonoBehaviour
         else
         transform.rotation = Quaternion.Euler(0, 180, 0);
     }
-    
-    
-    
+
+    private void OnDestroy()
+    {
+        Conditions.wincondition--;
+        EnemySpawner.currentSpawns--;
+        coins.UpdateGoldOnEnemyDestroyed();
+    }
+   
+
 }

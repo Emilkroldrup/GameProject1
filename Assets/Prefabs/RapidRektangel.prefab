@@ -204,4 +204,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxhealth: 20
-  healthbar: {fileID: 6850457034065416363, guid: 3ec3a5e3bb204c1458cd97e5c6a0d29e, type: 3}
+  healthbar: {fileID: 1315157837071573308, guid: ed91dc0467e72a048b5b02cfd05914d5, type: 3}

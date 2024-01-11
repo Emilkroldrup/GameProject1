@@ -6,13 +6,13 @@ public class EnemyPatrol : MonoBehaviour
 {
     public GameObject pointA;
     public GameObject pointB;
-   
-    
+    public float speed;
+
     private Rigidbody2D rb;
     //private Animator anim; // only used when I add some animations
     private Transform currentPoint;
-    public float speed;
-
+    private Coins coins;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +23,15 @@ public class EnemyPatrol : MonoBehaviour
         //anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
         //anim.SetBool("isRunning", true);
+
+        GameObject coinssobjekt = GameObject.FindGameObjectWithTag("Coins");
+        if (coins != null)
+        {
+            coins = coinssobjekt.GetComponent<Coins>();
+        }
+       
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 point = currentPoint.position - transform.position;
@@ -64,4 +70,13 @@ public class EnemyPatrol : MonoBehaviour
         Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
     }
+
+    
+    private void OnDestroy()
+    {
+        Conditions.wincondition--;
+        EnemySpawner.currentSpawns--;
+        coins.UpdateGoldOnEnemyDestroyed();
+    }
+    
 }

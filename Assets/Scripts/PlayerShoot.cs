@@ -9,11 +9,10 @@ public class PlayerShoot : MonoBehaviour
     public Transform launchOffSet;
 
     
-
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1")) // left ctrl
         {
             Instantiate(projectile, launchOffSet.position, transform.rotation);
         }

@@ -16,6 +16,13 @@ public class Enemy_Shoot : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        GameObject coinssobjekt = GameObject.FindGameObjectWithTag("Coins");
+        if (coins != null)
+        {
+            coins = coinssobjekt.GetComponent<Coins>();
+        }
+        
     }
 
     // Update is called once per frame
@@ -39,22 +46,20 @@ public class Enemy_Shoot : MonoBehaviour
             }
         }
 
-  
-
     }
 
     void Shoot()
     {
         Instantiate(projectile, projectilePos.position, Quaternion.identity);
     }
-
+    
     private void OnDestroy()
     {
        
             Conditions.wincondition--;
             EnemySpawner.currentSpawns--;
             coins.UpdateGoldOnEnemyDestroyed();
-        
-
+       
     }
+    
 }

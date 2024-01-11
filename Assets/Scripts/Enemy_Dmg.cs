@@ -19,6 +19,7 @@ public class Enemy_Dmg : MonoBehaviour
         {
             coins = coinssobjekt.GetComponent<Coins>();
         }
+        
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class Enemy_Dmg : MonoBehaviour
             playerHealth.TakeDamage(damage);
         }
     }
-
+    
     private void OnDestroy()
     {
         
@@ -43,4 +44,5 @@ public class Enemy_Dmg : MonoBehaviour
             coins.UpdateGoldOnEnemyDestroyed();
         
     }
+    
 }

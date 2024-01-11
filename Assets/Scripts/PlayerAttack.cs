@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemyLayers;
     public float attackDamage = 10;
     public float attackRange = 0.5f;
-  
+  /*
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -44,4 +44,5 @@ public class PlayerAttack : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+  */
 }

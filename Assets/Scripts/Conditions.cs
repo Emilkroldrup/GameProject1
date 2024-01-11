@@ -20,7 +20,7 @@ public class Conditions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( wincondition == 0 && !hasInitialized && player != null)
+        if( wincondition <= 0 && !hasInitialized && player != null)
         {
             Initializewincon(win);
             DisableOtherPrefab(Playercanvas);

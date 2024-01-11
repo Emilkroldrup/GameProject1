@@ -4,35 +4,24 @@ using UnityEngine;
 
 public class Enemy_Health : MonoBehaviour
 {
-    public int health;
-    public int maxhealth = 10;
-    public Healthbar healthbar;
+    public float health;
+    public float maxhealth = 10;
+    public Enemy_hb healthbar;
 
     // Start is called before the first frame update
     void Start()
     {
         health = maxhealth;
-        healthbar.setmaxhealth(maxhealth);
+        healthbar.SetHealth(health, maxhealth);
     }
 
-    public void TakeDamage(int amount) // amount = amount of damage taken
+    public void TakeDamage(float amount) // amount = amount of damage taken
     {
         health -= amount;
         if (health <= 0)
         {
-            Die();
-        }
-    }
-
-    // Update is called once per frame
-    void Die()
-    {
-        if (health <= 0)
-        {
             Destroy(gameObject);
-            Destroy(healthbar.gameObject);
         }
-
-        
     }
+    
 }

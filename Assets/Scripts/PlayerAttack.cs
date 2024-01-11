@@ -8,7 +8,7 @@ public class PlayerAttack : MonoBehaviour
     //public Animator animator;
     public Transform attackPoint;
     public LayerMask enemyLayers;
-    public int attackDamage = 10;
+    public float attackDamage = 10;
     public float attackRange = 0.5f;
   
     void Update()
@@ -31,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
         // Damage them
         foreach(Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy_Health>().TakeDamage(attackDamage);
+            enemy.GetComponent<Enemy_Health>().TakeDamage(attackDamage);    //null reference fejl
         
         }
     }

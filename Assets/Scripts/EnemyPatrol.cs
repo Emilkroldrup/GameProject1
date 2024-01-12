@@ -11,7 +11,7 @@ public class EnemyPatrol : MonoBehaviour
     private Rigidbody2D rb;
     //private Animator anim; // only used when I add some animations
     private Transform currentPoint;
-    private Coins coins;
+
     
 
     // Start is called before the first frame update
@@ -24,12 +24,7 @@ public class EnemyPatrol : MonoBehaviour
         currentPoint = pointB.transform;
         //anim.SetBool("isRunning", true);
 
-        GameObject coinssobjekt = GameObject.FindGameObjectWithTag("Coins");
-        if (coins != null)
-        {
-            coins = coinssobjekt.GetComponent<Coins>();
-        }
-       
+      
     }
 
     void Update()
@@ -72,11 +67,6 @@ public class EnemyPatrol : MonoBehaviour
     }
 
     
-    private void OnDestroy()
-    {
-        Conditions.wincondition--;
-        EnemySpawner.currentSpawns--;
-        coins.UpdateGoldOnEnemyDestroyed();
-    }
+ 
     
 }

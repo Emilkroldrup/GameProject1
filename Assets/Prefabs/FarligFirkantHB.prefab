@@ -230,6 +230,7 @@ MonoBehaviour:
   speed: 2
   chase: 0
   startingPoint: {fileID: 2946853585411981111}
+  coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
 --- !u!50 &8199630737170643687
 Rigidbody2D:
   serializedVersion: 4
@@ -315,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  coins: {fileID: 0}
+  coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
 --- !u!114 &598673396278124204
 MonoBehaviour:
   m_ObjectHideFlags: 0

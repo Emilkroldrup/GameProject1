@@ -10,13 +10,16 @@ public class EnemySpawner : MonoBehaviour
     public static int MaxSpawn = 6;
     public static int totalspawns;
     public static int currentSpawns;
+    public static int maxcurrentspawns = 5;
+    public static int runde = 1;
+    public static bool levelcomplete = false;
     [HideInInspector]
     public int randomfjende;
     private float tid;
     public float cooldown;
     private float maxx = 10;
     private float minx = 3;
-   
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +33,14 @@ public class EnemySpawner : MonoBehaviour
     {
         tid -= Time.deltaTime;
 
-        if (currentSpawns < 5 && tid <= 0 && totalspawns <MaxSpawn && player != null)
+        if (currentSpawns < maxcurrentspawns && tid <= 0 && totalspawns <MaxSpawn && player != null)
         {
                 spawnenemy();
                 tid = cooldown;
          
         }
+       
+            rundelogik();
     }
 
     private void spawnenemy()   
@@ -63,6 +68,26 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(enemyprefab[1], spawnposition, Quaternion.identity);
 
             }
+        }
+    }
+
+    private void rundelogik()
+    {
+        if(runde <=3 && totalspawns == MaxSpawn && currentSpawns == 0 && player !=null)
+        {
+            runde++;
+            Debug.Log(runde);
+            if(runde != 4)
+            {
+                totalspawns = 0;
+                MaxSpawn += 2;
+                maxcurrentspawns += 1;
+            }
+        }
+
+        if(runde == 4)
+        {
+            levelcomplete = true;
         }
     }
        

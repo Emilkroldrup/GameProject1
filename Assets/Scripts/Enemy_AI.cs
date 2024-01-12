@@ -11,23 +11,14 @@ public class Enemy_AI : MonoBehaviour
     public Transform startingPoint;
 
     private GameObject player;
-    private Coins coins;
+   
 
     //private Boolean hasdestroyed = false;
 
     // Start is called before the first frame update
     private void Start()
     {
-       
         player = GameObject.FindGameObjectWithTag("Player");
-        
-         GameObject coinssobjekt = GameObject.FindGameObjectWithTag("Coins");
-        if (coins != null)
-        {
-            coins = coinssobjekt.GetComponent<Coins>();
-        }
-        
-
     }
 
     // Update is called once per frame
@@ -63,12 +54,6 @@ public class Enemy_AI : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 180, 0);
     }
 
-    private void OnDestroy()
-    {
-        Conditions.wincondition--;
-        EnemySpawner.currentSpawns--;
-        coins.UpdateGoldOnEnemyDestroyed();
-    }
-   
+  
 
 }

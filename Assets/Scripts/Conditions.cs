@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Conditions : MonoBehaviour
 {
-
+    //WINSCREEN SCRIPT
   
     public static int wincondition = EnemySpawner.MaxSpawn;
     public GameObject win;
@@ -21,31 +21,22 @@ public class Conditions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( wincondition <= 0 && !hasInitialized && player != null)
+        if (EnemySpawner.levelcomplete && !hasInitialized && player != null)
         {
             Initializewincon(win);
             DisableOtherPrefab(Playercanvas);
             hasInitialized = true;
-
-          
         }
     }
 
     void Initializewincon(GameObject prefab)
-    {
-        
+    {   
         GameObject winCanvas = Instantiate(prefab, transform.position, transform.rotation);
-
-    
     }
 
 
     void DisableOtherPrefab(GameObject otherPrefab)
     {
-
-        
             Playercanvas.SetActive(false);
-        
-
     }
 }

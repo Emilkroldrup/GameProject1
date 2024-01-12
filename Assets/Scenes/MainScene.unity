@@ -738,9 +738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d13e3f9ff3b334cb14445c82f3b7d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
-
-
 --- !u!1 &1033580669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,11 +1226,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 819756384185372803, guid: ed91dc0467e72a048b5b02cfd05914d5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 819756384185372803, guid: ed91dc0467e72a048b5b02cfd05914d5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1315157837071573308, guid: ed91dc0467e72a048b5b02cfd05914d5, type: 3}
       propertyPath: offSet.y
@@ -1452,7 +1449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyprefab:
   - {fileID: 8026469704190966558, guid: 940405008db123e438199e75aa97c47e, type: 3}
-  - {fileID: 202248947881058745, guid: 02e494e834a68f244a98eb18ff24ab88, type: 3}
+  - {fileID: 9129687849476160362, guid: 0b3af86d3fd09394b8e65c9d497590b8, type: 3}
   player: {fileID: 4214496519554942450}
   randomfjende: 0
   cooldown: 0.5

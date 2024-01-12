@@ -11,6 +11,7 @@ public class Conditions : MonoBehaviour
     public GameObject Playercanvas;
     private bool hasInitialized = false;
     public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {

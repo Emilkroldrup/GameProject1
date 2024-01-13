@@ -2128,6 +2128,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6134085545263238269, guid: aebff79d4ca86134794172d4b4bd1aac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362996865756312651, guid: aebff79d4ca86134794172d4b4bd1aac, type: 3}
+      propertyPath: m_text
+      value: txtround
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362996865756312651, guid: aebff79d4ca86134794172d4b4bd1aac, type: 3}
+      propertyPath: m_margin.z
+      value: -211.52727
+      objectReference: {fileID: 0}
     - target: {fileID: 8034757220081120891, guid: aebff79d4ca86134794172d4b4bd1aac, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

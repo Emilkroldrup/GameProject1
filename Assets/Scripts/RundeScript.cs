@@ -9,11 +9,18 @@ public class RundeScript : MonoBehaviour
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
+        text.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        text.text = "Round" + " " + EnemySpawner.runde.ToString();
+
+        if (EnemySpawner.runde == EnemySpawner.lastround)
+        {
+            text.text = "Final Round";
+           
+        }
     }
 }

@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public static int currentSpawns;
     public static int maxcurrentspawns = 5;
     public static int runde = 1;
+    public static int lastround = 3;
     public static bool levelcomplete = false;
     [HideInInspector]
     public int randomfjende;
@@ -73,7 +74,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void rundelogik()
     {
-        if(runde <=3 && totalspawns == MaxSpawn && currentSpawns == 0 && player !=null)
+        if(runde <=lastround && totalspawns == MaxSpawn && currentSpawns == 0 && player !=null)
         {
             runde++;
             Debug.Log(runde);

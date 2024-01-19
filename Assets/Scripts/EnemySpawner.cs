@@ -7,13 +7,20 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemyprefab;
 
     public GameObject player;
-    public static int MaxSpawn = 6;
-    public static int totalspawns;
-    public static int currentSpawns;
-    public static int maxcurrentspawns = 5;
-    public static int runde = 1;
-    public static int lastround = 3;
-    public static bool levelcomplete = false;
+    [HideInInspector]
+    public int MaxSpawn = 6;
+    [HideInInspector]
+    public int totalspawns;
+   
+    public int currentSpawns;
+    [HideInInspector]
+    public int maxcurrentspawns = 5;
+    
+    public int runde = 1;
+    [HideInInspector]
+    public int lastround = 3;
+    [HideInInspector]
+    public bool levelcomplete = false;
     [HideInInspector]
     public int randomfjende;
     private float tid;
@@ -27,8 +34,8 @@ public class EnemySpawner : MonoBehaviour
     {
         tid = cooldown;
        
+        
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -38,12 +45,10 @@ public class EnemySpawner : MonoBehaviour
         {
                 spawnenemy();
                 tid = cooldown;
-         
         }
-       
             rundelogik();
+       
     }
-
     private void spawnenemy()   
     {
         if(player != null)
@@ -52,15 +57,11 @@ public class EnemySpawner : MonoBehaviour
             float spawnrange = Random.Range(minx, maxx);
             Transform playerTransform = player.transform;
             Vector3 spawnposition = playerTransform.position + new Vector3(spawnrange, 0, 0);
-
-
-
             if (randomfjende <= 7)
             {
                 currentSpawns++;
                 totalspawns++;
                 Instantiate(enemyprefab[0], spawnposition, Quaternion.identity);
-
             }
             else if (randomfjende >= 8)
             {
@@ -71,7 +72,6 @@ public class EnemySpawner : MonoBehaviour
             }
         }
     }
-
     private void rundelogik()
     {
         if(runde <=lastround && totalspawns == MaxSpawn && currentSpawns == 0 && player !=null)
@@ -91,5 +91,4 @@ public class EnemySpawner : MonoBehaviour
             levelcomplete = true;
         }
     }
-       
 }

@@ -8,6 +8,8 @@ public class Enemy_Health : MonoBehaviour
     public float maxhealth = 10;
     public Enemy_hb healthbar;
     public Coins coins;
+    public EnemySpawner spawner;
+    public Conditions Conditions;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,12 @@ public class Enemy_Health : MonoBehaviour
         {
             coins = coinssobjekt.GetComponent<Coins>();
         }
+
+        GameObject spawnerobjekt = GameObject.FindGameObjectWithTag("Spawner");
+        if (spawner != null)
+        {
+            spawner = spawnerobjekt.GetComponent<EnemySpawner>();
+        }
     }
 
     public void TakeDamage(float amount) // amount = amount of damage taken
@@ -26,9 +34,9 @@ public class Enemy_Health : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-                Conditions.wincondition--;
-                EnemySpawner.currentSpawns--;
-                coins.UpdateGoldOnEnemyDestroyed();
+            Conditions.wincondition--;
+            spawner.currentSpawns--;
+            coins.UpdateGoldOnEnemyDestroyed();
             Destroy(gameObject);
         }
     }

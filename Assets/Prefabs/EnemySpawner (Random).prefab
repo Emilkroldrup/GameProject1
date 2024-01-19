@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2767077633610110124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8149335210996457170}
+  - component: {fileID: 1468324605535733862}
+  m_Layer: 0
+  m_Name: EnemySpawner (Random)
+  m_TagString: Coins
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8149335210996457170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2767077633610110124}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.0745312, y: 0.35000002, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1468324605535733862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2767077633610110124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4bfbe3ebd80034b8330c174b8daa41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyprefab:
+  - {fileID: 8026469704190966558, guid: 940405008db123e438199e75aa97c47e, type: 3}
+  - {fileID: 202248947881058745, guid: 02e494e834a68f244a98eb18ff24ab88, type: 3}
+  player: {fileID: 6107151212317378733, guid: b97309b477e3f124d9669299e1882a1d, type: 3}
+  MaxSpawn: 6
+  totalspawns: 0
+  currentSpawns: 0
+  maxcurrentspawns: 5
+  runde: 1
+  lastround: 3
+  levelcomplete: 0
+  randomfjende: 0
+  cooldown: 0.5

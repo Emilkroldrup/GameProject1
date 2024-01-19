@@ -137,6 +137,8 @@ MonoBehaviour:
   projectile: {fileID: 5222313492546054912, guid: 9cfb9ec8567d1584ab9ca289d93a7de7, type: 3}
   projectilePos: {fileID: 7516376440640677920}
   coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
+  spawner: {fileID: 1468324605535733862, guid: a511395acc137c644a92723e1a39d5de, type: 3}
+  Conditions: {fileID: 2523854791485030276, guid: b97309b477e3f124d9669299e1882a1d, type: 3}
 --- !u!1 &7381460712064142323
 GameObject:
   m_ObjectHideFlags: 0

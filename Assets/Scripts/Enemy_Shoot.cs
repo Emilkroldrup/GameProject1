@@ -11,7 +11,9 @@ public class Enemy_Shoot : MonoBehaviour
     private float timer;
     private GameObject player;
     public Coins coins;
-   
+    public EnemySpawner spawner;
+    public Conditions Conditions;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,17 +24,18 @@ public class Enemy_Shoot : MonoBehaviour
         {
             coins = coinssobjekt.GetComponent<Coins>();
         }
+
+        GameObject spawnerobjekt = GameObject.FindGameObjectWithTag("Spawner");
+      
+            spawner = spawnerobjekt.GetComponent<EnemySpawner>();
         
     }
-
     // Update is called once per frame
     void Update()
     {
         if(player != null)
         {
             float distance = Vector2.Distance(transform.position, player.transform.position); //  Detects the distance between enemy and the player
-
-
             if (distance < 8)
             {
                 timer += Time.deltaTime;
@@ -45,9 +48,7 @@ public class Enemy_Shoot : MonoBehaviour
 
             }
         }
-
     }
-
     void Shoot()
     {
         Instantiate(projectile, projectilePos.position, Quaternion.identity);
@@ -55,11 +56,8 @@ public class Enemy_Shoot : MonoBehaviour
     
     private void OnDestroy()
     {
-       
             Conditions.wincondition--;
-            EnemySpawner.currentSpawns--;
+            spawner.currentSpawns--;
             coins.UpdateGoldOnEnemyDestroyed();
-       
     }
-    
 }

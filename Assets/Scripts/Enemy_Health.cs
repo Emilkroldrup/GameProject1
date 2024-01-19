@@ -23,10 +23,9 @@ public class Enemy_Health : MonoBehaviour
         }
 
         GameObject spawnerobjekt = GameObject.FindGameObjectWithTag("Spawner");
-        if (spawner != null)
-        {
+      
             spawner = spawnerobjekt.GetComponent<EnemySpawner>();
-        }
+        
     }
 
     public void TakeDamage(float amount) // amount = amount of damage taken

@@ -6,8 +6,8 @@ public class PlayerProjectile : MonoBehaviour
 {
     public float speed = 4.5f;
     public float bulletDamage;
-
     // Update is called once per frame
+
     private void Update()
     {
         transform.position += transform.right * Time.deltaTime * speed;
@@ -19,6 +19,7 @@ public class PlayerProjectile : MonoBehaviour
         if (enemy)
         {
             enemy.TakeDamage(bulletDamage);
+          
         }
         Destroy(gameObject);
     }

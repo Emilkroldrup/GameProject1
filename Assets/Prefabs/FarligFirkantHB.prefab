@@ -230,7 +230,6 @@ MonoBehaviour:
   speed: 2
   chase: 0
   startingPoint: {fileID: 2946853585411981111}
-  coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
 --- !u!50 &8199630737170643687
 Rigidbody2D:
   serializedVersion: 4
@@ -332,6 +331,7 @@ MonoBehaviour:
   health: 0
   maxhealth: 10
   healthbar: {fileID: 146837749126029833, guid: 04b92597ff277a94da346a316776cd37, type: 3}
+  coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
 --- !u!1001 &4733879253071402718
 PrefabInstance:
   m_ObjectHideFlags: 0

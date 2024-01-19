@@ -1706,7 +1706,7 @@ MonoBehaviour:
   - {fileID: 202248947881058745, guid: 02e494e834a68f244a98eb18ff24ab88, type: 3}
   player: {fileID: 4214496519554942450}
   randomfjende: 0
-  cooldown: 5
+  cooldown: 0.5
 --- !u!4 &1649932462
 Transform:
   m_ObjectHideFlags: 0

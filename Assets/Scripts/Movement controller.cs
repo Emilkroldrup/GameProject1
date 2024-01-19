@@ -20,6 +20,7 @@ public class MovementController : MonoBehaviour
     private float dashEndTime;
     private int jumpCount = 0;
     private const int maxJumpCount = 1; // Allows for double jump
+    
 
     void Start()
     {
@@ -54,7 +55,7 @@ public class MovementController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
 
-           if (moveX > 0 && spriteRenderer.flipX)
+        if (moveX > 0 && spriteRenderer.flipX)
         {
             FlipSprite();
         }
@@ -103,5 +104,6 @@ public class MovementController : MonoBehaviour
     private void FlipSprite()
     {
         spriteRenderer.flipX = !spriteRenderer.flipX;
+        transform.Rotate(0f, 180f, 0f);
     }
 }

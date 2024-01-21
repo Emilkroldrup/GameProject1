@@ -2355,6 +2355,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4214496519554942450}
+    - target: {fileID: 1468324605535733862, guid: a511395acc137c644a92723e1a39d5de, type: 3}
+      propertyPath: enemyprefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 6201955222904115271, guid: 3567572608c549347bccd7ca6f2d4894, type: 3}
+    - target: {fileID: 1468324605535733862, guid: a511395acc137c644a92723e1a39d5de, type: 3}
+      propertyPath: enemyprefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 2810712882478569618, guid: ed12241330cf98b459748e6696e4b1d0, type: 3}
     - target: {fileID: 2767077633610110124, guid: a511395acc137c644a92723e1a39d5de, type: 3}
       propertyPath: m_Name
       value: EnemySpawneren

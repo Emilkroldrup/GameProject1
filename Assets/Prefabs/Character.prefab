@@ -180,7 +180,6 @@ GameObject:
   - component: {fileID: 3870641517198414119}
   - component: {fileID: 2180666419456751755}
   - component: {fileID: 455125854532772809}
-  - component: {fileID: 2523854791485030276}
   - component: {fileID: 1586480290192502153}
   - component: {fileID: 810819957423447879}
   m_Layer: 0
@@ -248,20 +247,6 @@ MonoBehaviour:
   health: -20
   maxhealth: 50
   healthbar: {fileID: 0}
---- !u!114 &2523854791485030276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6107151212317378733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6a65feb90c6f04187896bc15ab16f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  win: {fileID: 4351549316377161086, guid: 9df4420dcbf4a4449a0de854da45664f, type: 3}
-  Playercanvas: {fileID: 0}
 --- !u!58 &1586480290192502153
 CircleCollider2D:
   m_ObjectHideFlags: 0

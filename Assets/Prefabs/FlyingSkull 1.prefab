@@ -333,7 +333,7 @@ MonoBehaviour:
   healthbar: {fileID: 146837749126029833, guid: 04b92597ff277a94da346a316776cd37, type: 3}
   coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
   spawner: {fileID: 1468324605535733862, guid: a511395acc137c644a92723e1a39d5de, type: 3}
-  Conditions: {fileID: -5017967404402806042, guid: b97309b477e3f124d9669299e1882a1d, type: 3}
+  Conditions: {fileID: 5828079268193933230, guid: d38a1b45d71dc594db7daeb6c9892fde, type: 3}
 --- !u!1001 &4579792025411860587
 PrefabInstance:
   m_ObjectHideFlags: 0

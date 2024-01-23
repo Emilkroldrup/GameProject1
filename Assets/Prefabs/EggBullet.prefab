@@ -162,5 +162,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  bulletDamage: 20
-  coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
+  bulletDamage: 5

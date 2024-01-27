@@ -11,6 +11,7 @@ public class Conditions : MonoBehaviour
     public GameObject Playercanvas;
     private bool hasInitialized = false;
     public GameObject player;
+    public static int runde = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class Conditions : MonoBehaviour
             Initializewincon(win);
             DisableOtherPrefab(Playercanvas);
             hasInitialized = true;
+            runde++;
         }
     }
 

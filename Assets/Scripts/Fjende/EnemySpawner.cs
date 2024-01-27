@@ -23,6 +23,8 @@ public class EnemySpawner : MonoBehaviour
     public bool levelcomplete = false;
     [HideInInspector]
     public int randomfjende;
+    [HideInInspector]
+    public int totalfjender = 24;
     private float tid;
     public float cooldown;
     private float maxx = 10;

@@ -370,7 +370,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 120421084425691905}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: RetryGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

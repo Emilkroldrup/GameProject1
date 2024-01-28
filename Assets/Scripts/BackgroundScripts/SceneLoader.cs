@@ -10,13 +10,6 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player") 
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );  // goes to the next scene in line
-        }
-    }
 
     public void PlayGame()
     {

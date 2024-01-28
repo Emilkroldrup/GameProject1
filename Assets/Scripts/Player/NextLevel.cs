@@ -9,6 +9,13 @@ public class NextLevel : MonoBehaviour
     {
         if(other.CompareTag("Player")){
             SceneManager.LoadSceneAsync("Level" + Conditions.runde);
+
         }
+        if (other.tag == "Player")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);  // goes to the next scene in line
+        }
+        
     }
+    
 }

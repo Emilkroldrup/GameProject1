@@ -5,11 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class WinTrophy : MonoBehaviour
 {
+    public bool trophyTouched = false;
+ 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
+            trophyTouched = true;
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+           
         }
     }
+
 }
+

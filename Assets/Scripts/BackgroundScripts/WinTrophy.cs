@@ -12,7 +12,7 @@ public class WinTrophy : MonoBehaviour
         if (collision.tag == "Player")
         {
             trophyTouched = true;
-
+            Conditions.runde++;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
            
         }

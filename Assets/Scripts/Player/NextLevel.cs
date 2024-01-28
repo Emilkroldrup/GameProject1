@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class NextLevel : MonoBehaviour
 {
+    
+    public TMP_Text nextLevel;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player")){
@@ -17,5 +21,8 @@ public class NextLevel : MonoBehaviour
         }
         
     }
-    
+
+    void Update(){
+        nextLevel.text = "Level " + Conditions.runde;
+    }
 }

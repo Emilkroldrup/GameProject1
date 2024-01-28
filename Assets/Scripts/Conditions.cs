@@ -28,6 +28,8 @@ public class Conditions : MonoBehaviour
             DisableOtherPrefab(Playercanvas);
             hasInitialized = true;
         }
+
+       // Win by running into the trophy
     }
 
     void Initializewincon(GameObject prefab)

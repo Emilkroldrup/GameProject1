@@ -22,5 +22,5 @@ public class Enemy_hb : MonoBehaviour
     void Update()
     {
         slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offSet);   
-    }
+    }   
 }

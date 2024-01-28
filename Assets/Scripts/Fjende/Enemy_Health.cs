@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy_Health : MonoBehaviour
 {
@@ -10,9 +11,13 @@ public class Enemy_Health : MonoBehaviour
     public Coins coins;
     public EnemySpawner spawner;
     public Conditions Conditions;
+    private Level2 lvl2;
     // Start is called before the first frame update
     void Start()
     {
+        if(SceneManager.GetActiveScene().buildIndex == 3){
+            lvl2 = GameObject.FindGameObjectWithTag("Waves").GetComponent<Level2>();
+        }
         health = maxhealth;
         healthbar.SetHealth(health, maxhealth);
 
@@ -33,6 +38,9 @@ public class Enemy_Health : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
+            if(SceneManager.GetActiveScene().buildIndex == 3){
+                lvl2.IncreaseAntal();
+            }
             Conditions.wincondition--;
             spawner.currentSpawns--;
             coins.UpdateGoldOnEnemyDestroyed();

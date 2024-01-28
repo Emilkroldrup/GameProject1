@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public void RetryGame()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync(1);
     }
-
     public void SafeHub(){
         SceneManager.LoadScene(2);
     }

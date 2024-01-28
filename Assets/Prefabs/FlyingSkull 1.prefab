@@ -334,6 +334,7 @@ MonoBehaviour:
   coins: {fileID: 1235084602460829095, guid: aaad1999eaada4743b09c9d90223d251, type: 3}
   spawner: {fileID: 1468324605535733862, guid: a511395acc137c644a92723e1a39d5de, type: 3}
   Conditions: {fileID: 5828079268193933230, guid: d38a1b45d71dc594db7daeb6c9892fde, type: 3}
+  lvl2: {fileID: 6005496739920170896, guid: 5757737cc86384a4585c4d0eaf0a53b9, type: 3}
 --- !u!1001 &4579792025411860587
 PrefabInstance:
   m_ObjectHideFlags: 0
